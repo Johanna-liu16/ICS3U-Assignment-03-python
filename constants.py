@@ -5,4 +5,3 @@
 # This file holds the constants for the guessing program
 
 TAX = 1.13
-UNIT_PRICE = 100
