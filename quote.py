@@ -14,7 +14,7 @@ def main():
     print("This program calculates the amount you will pay.")
     print("One unit is $100.\n")
     unit_price = int(100)
-    discount = int(0.10)
+    discount = float(0.10)
     user_number = input("Enter the amount of units you want to buy: ")
 
     # process and output
@@ -24,11 +24,15 @@ def main():
             sub_total = integer_number * unit_price
             plus_discount = sub_total - (sub_total * discount)
             total = plus_discount * constants.TAX
-            print("You received a 10% discount. \nYour total is $ {0}".format(round(total,2)))
+            print(
+                "You received a 10% discount. \nYour total is $ {0}".format(
+                    round(total, 2)
+                )
+            )
         elif integer_number <= 1000:
             sub_total = integer_number * unit_price
             total = sub_total * constants.TAX
-            print("Your total is ${0}.".format(round(total,2)))
+            print("Your total is ${0}.".format(round(total, 2)))
     except ValueError:
         print("Invalid integer")
     finally:
